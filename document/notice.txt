@@ -1,0 +1,16 @@
+1、测试用例位置
+  每一个测试功能点都为一.t文件，统一存放在test/testcase目录下,且最好放在对应的项目、文件夹下，方便管理
+2、测试用例编译
+    编写后的.t，利用test/win_test_generator.exe文件进行编译，例如 win_test_generator 文件  项目名（cloudplatform、palace），
+    会对.t文件进行编译生成对应的.java文件，且编译后的文件会自动移动到对应的目录下，方便运行测试用例
+    项目名为cloudplatform，则编译后的文件统一会放在 test\WebAutoTest\src\test\java\com\sinosoft\autotest\cloudplatform
+    项目名为palace,则编译后的文件统一会放在 test\WebAutoTest\src\test\java\com\sinosoft\autotest\palace
+3、测试用例编写
+   .t其中使用的语言为弱语言，也就是说不需要声明变量类型，就可以直接直接用。
+   .t中必须定义void test()，作为程序的主入口，且支持函数调用
+   .t中支持for in 形式的循环方式， if语句，且支持null关键字，所有的变量统一被定义成字符串形式即用""
+
+4、API
+   .t中使用的函数请参考API文档，文件路径为test\WebAutoTest\doc\API.rar， 解压后直接点击 API文档.html 就可以查看其中的函数含义
+   BaseCommon中定义常用的函数名称
+   ElementTypeEnum中定义常用的是测试框架支持的获取元素的方式，这些选择方式和Jquery的选择器比较相似，大家可以进行比较，方便进行使用
