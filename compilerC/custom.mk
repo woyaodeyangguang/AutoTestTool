@@ -1,0 +1,2 @@
+#make options
+BUILDDIR=build
